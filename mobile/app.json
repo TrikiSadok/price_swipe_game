@@ -1,0 +1,53 @@
+{
+  "expo": {
+    "name": "Price Swipe",
+    "slug": "price-swipe",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "priceswipe",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "bundleIdentifier": "com.priceswipe.showcase",
+      "supportsTablet": false,
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "com.priceswipe.showcase"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#6C4CF5",
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 120
+        }
+      ],
+      "expo-secure-store",
+      "@maplibre/maplibre-react-native",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Price Swipe uses the camera to photograph products and their prices.",
+          "microphonePermission": false,
+          "recordAudioAndroid": false
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Price Swipe lets you post a photo of a product from your library.",
+          "cameraPermission": "Price Swipe uses the camera to photograph products and their prices.",
+          "microphonePermission": false
+        }
+      ]
+    ],
+    "experiments": {
+      "reactCompiler": true
+    }
+  }
+}

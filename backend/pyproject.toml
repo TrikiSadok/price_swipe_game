@@ -1,0 +1,23 @@
+[project]
+name = "priceswipe-backend"
+version = "0.1.0"
+description = "Small FastAPI server for the Price Swipe demo"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.140",
+    "uvicorn[standard]>=0.50",
+    "sqlalchemy>=2.1",
+    "python-multipart>=0.0.30",
+    "pillow>=12.0",
+]
+
+[dependency-groups]
+dev = ["pytest>=9.0", "httpx2"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.uv]
+# Only use package versions at least ~2 weeks old (new releases sometimes ship with bugs).
+exclude-newer = "2026-11-05T00:00:00Z"
